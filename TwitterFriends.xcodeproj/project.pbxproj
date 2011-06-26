@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		078D946E13B7A19A0009B052 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078D946D13B7A19A0009B052 /* UIKit.framework */; };
+		078D947013B7A19A0009B052 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078D946F13B7A19A0009B052 /* Foundation.framework */; };
+		078D947213B7A19A0009B052 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078D947113B7A19A0009B052 /* CoreGraphics.framework */; };
+		078D947413B7A19A0009B052 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078D947313B7A19A0009B052 /* CoreData.framework */; };
+		078D947A13B7A19A0009B052 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 078D947813B7A19A0009B052 /* InfoPlist.strings */; };
+		078D947C13B7A19A0009B052 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D947B13B7A19A0009B052 /* main.m */; };
+		078D948013B7A19A0009B052 /* TwitterFriendsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D947F13B7A19A0009B052 /* TwitterFriendsAppDelegate.m */; };
+		078D948313B7A19A0009B052 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 078D948113B7A19A0009B052 /* MainStoryboard.storyboard */; };
+		078D948613B7A19A0009B052 /* TwitterFriends.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 078D948413B7A19A0009B052 /* TwitterFriends.xcdatamodeld */; };
+		078D948913B7A19A0009B052 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D948813B7A19A0009B052 /* RootViewController.m */; };
+		078D948B13B7A19A0009B052 /* DetailViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 078D948A13B7A19A0009B052 /* DetailViewController.h */; };
+		078D948D13B7A19A0009B052 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D948C13B7A19A0009B052 /* DetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		078D946913B7A19A0009B052 /* TwitterFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		078D946D13B7A19A0009B052 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		078D946F13B7A19A0009B052 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		078D947113B7A19A0009B052 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		078D947313B7A19A0009B052 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		078D947713B7A19A0009B052 /* TwitterFriends-Info.plist */ = {isa = PBXFileReference; path = "TwitterFriends-Info.plist"; sourceTree = "<group>"; };
+		078D947913B7A19A0009B052 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		078D947B13B7A19A0009B052 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		078D947D13B7A19A0009B052 /* TwitterFriends-Prefix.pch */ = {isa = PBXFileReference; path = "TwitterFriends-Prefix.pch"; sourceTree = "<group>"; };
+		078D947E13B7A19A0009B052 /* TwitterFriendsAppDelegate.h */ = {isa = PBXFileReference; path = TwitterFriendsAppDelegate.h; sourceTree = "<group>"; };
+		078D947F13B7A19A0009B052 /* TwitterFriendsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwitterFriendsAppDelegate.m; sourceTree = "<group>"; };
+		078D948213B7A19A0009B052 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		078D948513B7A19A0009B052 /* TwitterFriends.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TwitterFriends.xcdatamodel; sourceTree = "<group>"; };
+		078D948713B7A19A0009B052 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		078D948813B7A19A0009B052 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		078D948A13B7A19A0009B052 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		078D948C13B7A19A0009B052 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		078D946613B7A19A0009B052 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				078D946E13B7A19A0009B052 /* UIKit.framework in Frameworks */,
+				078D947013B7A19A0009B052 /* Foundation.framework in Frameworks */,
+				078D947213B7A19A0009B052 /* CoreGraphics.framework in Frameworks */,
+				078D947413B7A19A0009B052 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		078D945E13B7A1990009B052 = {
+			isa = PBXGroup;
+			children = (
+				078D947513B7A19A0009B052 /* TwitterFriends */,
+				078D946C13B7A19A0009B052 /* Frameworks */,
+				078D946A13B7A19A0009B052 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		078D946A13B7A19A0009B052 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				078D946913B7A19A0009B052 /* TwitterFriends.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		078D946C13B7A19A0009B052 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				078D946D13B7A19A0009B052 /* UIKit.framework */,
+				078D946F13B7A19A0009B052 /* Foundation.framework */,
+				078D947113B7A19A0009B052 /* CoreGraphics.framework */,
+				078D947313B7A19A0009B052 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		078D947513B7A19A0009B052 /* TwitterFriends */ = {
+			isa = PBXGroup;
+			children = (
+				078D947E13B7A19A0009B052 /* TwitterFriendsAppDelegate.h */,
+				078D947F13B7A19A0009B052 /* TwitterFriendsAppDelegate.m */,
+				078D948113B7A19A0009B052 /* MainStoryboard.storyboard */,
+				078D948713B7A19A0009B052 /* RootViewController.h */,
+				078D948813B7A19A0009B052 /* RootViewController.m */,
+				078D948A13B7A19A0009B052 /* DetailViewController.h */,
+				078D948C13B7A19A0009B052 /* DetailViewController.m */,
+				078D948413B7A19A0009B052 /* TwitterFriends.xcdatamodeld */,
+				078D947613B7A19A0009B052 /* Supporting Files */,
+			);
+			path = TwitterFriends;
+			sourceTree = "<group>";
+		};
+		078D947613B7A19A0009B052 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				078D947713B7A19A0009B052 /* TwitterFriends-Info.plist */,
+				078D947813B7A19A0009B052 /* InfoPlist.strings */,
+				078D947B13B7A19A0009B052 /* main.m */,
+				078D947D13B7A19A0009B052 /* TwitterFriends-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		078D946813B7A19A0009B052 /* TwitterFriends */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 078D949013B7A19A0009B052 /* Build configuration list for PBXNativeTarget "TwitterFriends" */;
+			buildPhases = (
+				078D946513B7A19A0009B052 /* Sources */,
+				078D946613B7A19A0009B052 /* Frameworks */,
+				078D946713B7A19A0009B052 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwitterFriends;
+			productName = TwitterFriends;
+			productReference = 078D946913B7A19A0009B052 /* TwitterFriends.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		078D946013B7A1990009B052 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = EnvyLabs;
+			};
+			buildConfigurationList = 078D946313B7A1990009B052 /* Build configuration list for PBXProject "TwitterFriends" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 078D945E13B7A1990009B052;
+			productRefGroup = 078D946A13B7A19A0009B052 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				078D946813B7A19A0009B052 /* TwitterFriends */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		078D946713B7A19A0009B052 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				078D947A13B7A19A0009B052 /* InfoPlist.strings in Resources */,
+				078D948313B7A19A0009B052 /* MainStoryboard.storyboard in Resources */,
+				078D948B13B7A19A0009B052 /* DetailViewController.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		078D946513B7A19A0009B052 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				078D947C13B7A19A0009B052 /* main.m in Sources */,
+				078D948013B7A19A0009B052 /* TwitterFriendsAppDelegate.m in Sources */,
+				078D948613B7A19A0009B052 /* TwitterFriends.xcdatamodeld in Sources */,
+				078D948913B7A19A0009B052 /* RootViewController.m in Sources */,
+				078D948D13B7A19A0009B052 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		078D947813B7A19A0009B052 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				078D947913B7A19A0009B052 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		078D948113B7A19A0009B052 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				078D948213B7A19A0009B052 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		078D948E13B7A19A0009B052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		078D948F13B7A19A0009B052 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		078D949113B7A19A0009B052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TwitterFriends/TwitterFriends-Prefix.pch";
+				INFOPLIST_FILE = "TwitterFriends/TwitterFriends-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		078D949213B7A19A0009B052 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TwitterFriends/TwitterFriends-Prefix.pch";
+				INFOPLIST_FILE = "TwitterFriends/TwitterFriends-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		078D946313B7A1990009B052 /* Build configuration list for PBXProject "TwitterFriends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				078D948E13B7A19A0009B052 /* Debug */,
+				078D948F13B7A19A0009B052 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		078D949013B7A19A0009B052 /* Build configuration list for PBXNativeTarget "TwitterFriends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				078D949113B7A19A0009B052 /* Debug */,
+				078D949213B7A19A0009B052 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		078D948413B7A19A0009B052 /* TwitterFriends.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				078D948513B7A19A0009B052 /* TwitterFriends.xcdatamodel */,
+			);
+			currentVersion = 078D948513B7A19A0009B052 /* TwitterFriends.xcdatamodel */;
+			path = TwitterFriends.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 078D946013B7A1990009B052 /* Project object */;
+}

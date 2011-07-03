@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 
 #import "RootViewController.h"
+#import "TwitterUser.h"
 
 @interface DetailViewController ()
 - (void)configureView;
@@ -18,6 +19,7 @@
 
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize avatarImageView = _avatarImageView;
 
 - (id)initWithCoder:(NSCoder *)coder
 {
@@ -29,10 +31,12 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setDetailItem:(TwitterUser *)twitterUser
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
+    NSLog(@"setDetailItem: %@", twitterUser);
+    
+    if (_detailItem != twitterUser) {
+        _detailItem = twitterUser;
         
         // Update the view.
         [self configureView];
@@ -44,7 +48,8 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        self.detailDescriptionLabel.text = self.detailItem.screenName;
+        self.avatarImageView.image = [UIImage imageWithData:self.detailItem.profileImage];
     }
 }
 
@@ -65,6 +70,7 @@
 
 - (void)viewDidUnload
 {
+    [self setAvatarImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

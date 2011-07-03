@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071DE84113B974DF00D133F9 /* TwitterFriendTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 071DE84013B974DF00D133F9 /* TwitterFriendTableCell.m */; };
+		0738A1B213BF51AA0063B945 /* TwitterUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0738A1B113BF51AA0063B945 /* TwitterUser.m */; };
 		078D946E13B7A19A0009B052 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078D946D13B7A19A0009B052 /* UIKit.framework */; };
 		078D947013B7A19A0009B052 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078D946F13B7A19A0009B052 /* Foundation.framework */; };
 		078D947213B7A19A0009B052 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078D947113B7A19A0009B052 /* CoreGraphics.framework */; };
@@ -19,26 +21,34 @@
 		078D948913B7A19A0009B052 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D948813B7A19A0009B052 /* RootViewController.m */; };
 		078D948B13B7A19A0009B052 /* DetailViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 078D948A13B7A19A0009B052 /* DetailViewController.h */; };
 		078D948D13B7A19A0009B052 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078D948C13B7A19A0009B052 /* DetailViewController.m */; };
+		078D949813B7A20E0009B052 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078D949713B7A20E0009B052 /* Accounts.framework */; };
+		078D949A13B7A2140009B052 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078D949913B7A2140009B052 /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071DE83F13B974DF00D133F9 /* TwitterFriendTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterFriendTableCell.h; sourceTree = "<group>"; };
+		071DE84013B974DF00D133F9 /* TwitterFriendTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterFriendTableCell.m; sourceTree = "<group>"; };
+		0738A1B013BF51AA0063B945 /* TwitterUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterUser.h; sourceTree = "<group>"; };
+		0738A1B113BF51AA0063B945 /* TwitterUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterUser.m; sourceTree = "<group>"; };
 		078D946913B7A19A0009B052 /* TwitterFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		078D946D13B7A19A0009B052 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		078D946F13B7A19A0009B052 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		078D947113B7A19A0009B052 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		078D947313B7A19A0009B052 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		078D947713B7A19A0009B052 /* TwitterFriends-Info.plist */ = {isa = PBXFileReference; path = "TwitterFriends-Info.plist"; sourceTree = "<group>"; };
+		078D947713B7A19A0009B052 /* TwitterFriends-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TwitterFriends-Info.plist"; sourceTree = "<group>"; };
 		078D947913B7A19A0009B052 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		078D947B13B7A19A0009B052 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		078D947D13B7A19A0009B052 /* TwitterFriends-Prefix.pch */ = {isa = PBXFileReference; path = "TwitterFriends-Prefix.pch"; sourceTree = "<group>"; };
-		078D947E13B7A19A0009B052 /* TwitterFriendsAppDelegate.h */ = {isa = PBXFileReference; path = TwitterFriendsAppDelegate.h; sourceTree = "<group>"; };
+		078D947D13B7A19A0009B052 /* TwitterFriends-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TwitterFriends-Prefix.pch"; sourceTree = "<group>"; };
+		078D947E13B7A19A0009B052 /* TwitterFriendsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwitterFriendsAppDelegate.h; sourceTree = "<group>"; };
 		078D947F13B7A19A0009B052 /* TwitterFriendsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwitterFriendsAppDelegate.m; sourceTree = "<group>"; };
 		078D948213B7A19A0009B052 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		078D948513B7A19A0009B052 /* TwitterFriends.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TwitterFriends.xcdatamodel; sourceTree = "<group>"; };
-		078D948713B7A19A0009B052 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		078D948713B7A19A0009B052 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		078D948813B7A19A0009B052 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		078D948A13B7A19A0009B052 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		078D948C13B7A19A0009B052 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		078D949713B7A20E0009B052 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		078D949913B7A2140009B052 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078D949A13B7A2140009B052 /* Twitter.framework in Frameworks */,
+				078D949813B7A20E0009B052 /* Accounts.framework in Frameworks */,
 				078D946E13B7A19A0009B052 /* UIKit.framework in Frameworks */,
 				078D947013B7A19A0009B052 /* Foundation.framework in Frameworks */,
 				078D947213B7A19A0009B052 /* CoreGraphics.framework in Frameworks */,
@@ -59,6 +71,8 @@
 		078D945E13B7A1990009B052 = {
 			isa = PBXGroup;
 			children = (
+				078D949913B7A2140009B052 /* Twitter.framework */,
+				078D949713B7A20E0009B052 /* Accounts.framework */,
 				078D947513B7A19A0009B052 /* TwitterFriends */,
 				078D946C13B7A19A0009B052 /* Frameworks */,
 				078D946A13B7A19A0009B052 /* Products */,
@@ -87,6 +101,10 @@
 		078D947513B7A19A0009B052 /* TwitterFriends */ = {
 			isa = PBXGroup;
 			children = (
+				0738A1B013BF51AA0063B945 /* TwitterUser.h */,
+				0738A1B113BF51AA0063B945 /* TwitterUser.m */,
+				071DE83F13B974DF00D133F9 /* TwitterFriendTableCell.h */,
+				071DE84013B974DF00D133F9 /* TwitterFriendTableCell.m */,
 				078D947E13B7A19A0009B052 /* TwitterFriendsAppDelegate.h */,
 				078D947F13B7A19A0009B052 /* TwitterFriendsAppDelegate.m */,
 				078D948113B7A19A0009B052 /* MainStoryboard.storyboard */,
@@ -179,6 +197,8 @@
 				078D948613B7A19A0009B052 /* TwitterFriends.xcdatamodeld in Sources */,
 				078D948913B7A19A0009B052 /* RootViewController.m in Sources */,
 				078D948D13B7A19A0009B052 /* DetailViewController.m in Sources */,
+				071DE84113B974DF00D133F9 /* TwitterFriendTableCell.m in Sources */,
+				0738A1B213BF51AA0063B945 /* TwitterUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +310,7 @@
 				078D949213B7A19A0009B052 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

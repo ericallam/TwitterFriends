@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TwitterUser.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController {
+    UIImageView *_avatarImageView;
+}
 
-@property (strong, nonatomic) id detailItem;
+
+@property (strong, nonatomic) TwitterUser *detailItem;
 
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (nonatomic, strong) IBOutlet UIImageView *avatarImageView;
 
 @end

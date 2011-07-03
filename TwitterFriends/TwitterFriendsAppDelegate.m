@@ -7,6 +7,8 @@
 //
 
 #import "TwitterFriendsAppDelegate.h"
+#import "Twitter/Twitter.h"
+#import "TwitterUser.h"
 
 @implementation TwitterFriendsAppDelegate
 
@@ -14,12 +16,101 @@
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
+@synthesize accountStore;
+@synthesize twitterAccount;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
+    
+    // initialize the account store
+    self.accountStore = [[ACAccountStore alloc] init];
+    
+    //NSLog(@"ACAccountStore: %@", self.accountStore);
+    
+    //Get the twitter account type
+    ACAccountType *twitterAccountType = [self.accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    
+    //request access to twitter:
+    [self.accountStore requestAccessToAccountsWithType:twitterAccountType withCompletionHandler:^(BOOL granted, NSError *__strong error){
+        
+        if (granted) {
+            self.twitterAccount = [[self.accountStore accountsWithAccountType:twitterAccountType] objectAtIndex:0];
+            
+            dispatch_async(dispatch_get_main_queue(), ^(void) {
+                [self fetchAndStoreTwitterFriends];
+            });
+            
+            
+        }else {
+            NSLog(@"User did not grant access to their twitter account");
+        }
+
+        
+        
+    }];
+    
     return YES;
+}
+
+- (void)storeTwitterFriends:(NSArray *)friendData {
+    // Create a new instance of the entity managed by the fetched results controller.
+    
+    for (NSDictionary *element in friendData) {
+        TwitterUser *newTwitterUser = [NSEntityDescription insertNewObjectForEntityForName:@"TwitterUser" inManagedObjectContext:self.managedObjectContext];
+        
+        newTwitterUser.name = [element objectForKey:@"name"];
+        newTwitterUser.profileImageURL = [element objectForKey:@"profile_image_url"];
+        newTwitterUser.screenName = [element objectForKey:@"screen_name"];
+        newTwitterUser.twitterID = [element objectForKey:@"id"];
+        
+//        NSLog(@"Creating a new Twitter User in Core Data: %@", newTwitterUser);
+        
+    }
+    
+    [self saveContext];
+    
+    
+}
+
+
+- (void) fetchAndStoreTwitterFriends {
+    
+    // we need to make sure we havent already done this.
+    
+    NSUInteger count = [TwitterUser countWithContext:self.managedObjectContext];
+    
+    NSLog(@"TwitterUser count: %d", count);
+    
+    if(count == 0){
+    
+        NSURL *friendsURL = [NSURL URLWithString:@"http://api.twitter.com/1/statuses/friends.json?include_entities=true"];
+        
+        TWRequest *friendsRequest = [[TWRequest alloc] initWithURL:friendsURL parameters:nil requestMethod:TWRequestMethodGET];
+        
+        friendsRequest.account = self.twitterAccount;
+        
+        
+        [friendsRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+            
+            NSLog(@"Fetching new twitter friends");
+            
+            NSError *jsonError = nil;
+            NSArray *friendData = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonError];
+            
+            if(jsonError){
+                NSLog(@"Got a JSON error: %@, %@", jsonError, [jsonError userInfo]);
+            }else {
+                dispatch_async(dispatch_get_main_queue(), ^(void) {
+                    [self storeTwitterFriends:friendData];
+                });
+            }
+            
+            
+        }];
+    }
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -78,6 +169,13 @@
 }
 
 #pragma mark - Core Data stack
+
+- (NSFetchRequest *)fetchRequestFromTemplateWithName:(NSString *)name substitutionVariables:(NSDictionary *)variables {
+    
+    NSFetchRequest *fetchRequest = [[self managedObjectModel] fetchRequestFromTemplateWithName:name substitutionVariables:variables];
+    
+    return fetchRequest;
+}
 
 /**
  Returns the managed object context for the application.
